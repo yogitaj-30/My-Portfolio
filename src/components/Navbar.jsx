@@ -29,12 +29,12 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <ul className="md:hidden flex flex-col items-center bg-indigo-400 py-6 gap-6 text-lg font-medium">
-                    <li><a href="#about" onClick={() => setIsOpen(false)}>About Me</a></li>
-                    <li><a href="#skills" onClick={() => setIsOpen(false)}>Skills</a></li>
-                    <li><a href="#projects" onClick={() => setIsOpen(false)}>Projects</a></li>
-                    <li><a href="#github" onClick={() => setIsOpen(false)}>GitHub</a></li>
-                    <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+                <ul className="md:hidden flex flex-col items-center bg-white/20 rounded-md backdrop-blur-md py-6 gap-6 text-lg font-medium fixed top-16 left-0 w-full shadow-lg">
+                    <li><a href="#about" className="font-bold text-xl text-gray-700" onClick={() => setIsOpen(false)}>About Me</a></li>
+                    <li><a href="#skills" className="font-bold text-xl text-gray-700" onClick={() => setIsOpen(false)}>Skills</a></li>
+                    <li><a href="#projects" className="font-bold text-xl text-gray-700" onClick={() => setIsOpen(false)}>Projects</a></li>
+                    <li><a href="#github" className="font-bold text-xl text-gray-700" onClick={() => setIsOpen(false)}>GitHub</a></li>
+                    <li><a href="#contact" className="font-bold text-xl text-gray-700" onClick={() => setIsOpen(false)}>Contact</a></li>
                 </ul>
             )}
         </nav>
