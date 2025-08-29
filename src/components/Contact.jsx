@@ -7,7 +7,7 @@ const Contact = () => {
             id="contact"
             className="py-16 bg-indigo-400 text-center"
         >
-            <h1 className="text-4xl font-bold mb-6 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                 Contact
             </h1>
 
@@ -18,6 +18,7 @@ const Contact = () => {
                     <a
                         href="mailto:joshiyogita67@gmail.com"
                         className="text-gray-200 hover:underline hover:text-yellow-300"
+                        target="_blank"
                     >
                         joshiyogita67@gmail.com
                     </a>
@@ -43,6 +44,7 @@ const Contact = () => {
                 </a>
                 <a
                     href="mailto:joshiyogita67@gmail.com"
+                    target="_blank"
                     className="text-white text-4xl hover:scale-110 transition-transform hover:text-amber-200"
                 >
                     <FaEnvelope />
