@@ -4,8 +4,7 @@ import { subYears, startOfMonth } from "date-fns";
 
 const GitHub = () => {
     return (
-        <section id="github" className="min-h-screen bg-indigo-50 px-6 py-12 text-center"
-        >
+        <section id="github" className="min-h-screen px-6 py-12 text-center">
             <h1 className="text-3xl md:text-4xl font-bold text-indigo-700 mb-10">
                 My GitHub Statistics
             </h1>
