@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = () => {
     return (
-        <section id="projects" className="min-h-screen bg-gray-50 px-6 py-16">
+        <section id="projects" className="min-h-screen bg-gray-50 px-6 py-8">
             <h1 className="text-3xl md:text-4xl font-bold text-center text-indigo-700 mb-12">
                 Projects
             </h1>
