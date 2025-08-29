@@ -6,5 +6,63 @@ html {
   scroll-behavior: smooth;
 }
 
-@import "tailwindcss";
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
 
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #92c0e1, #b5eef3);
+  border-radius: 50%;
+  animation: float 8s infinite ease-in-out;
+  opacity: 0.6;
+}
+
+.hero::before {
+  top: -100px;
+  left: -150px;
+}
+
+.hero::after {
+  bottom: -120px;
+  right: -150px;
+  animation-delay: 4s;
+}
+
+@media (max-width: 992px) {
+  .hero::before,
+  .hero::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero::before,
+  .hero::after {
+    width: 150px;
+    height: 150px;
+    opacity: 0.3;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+  }
+}
+
+@import "tailwindcss";
