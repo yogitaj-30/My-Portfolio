@@ -60,7 +60,7 @@ const Projects = () => {
 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition">
                     <img
-                        src="./Screenshot (1232).png"
+                        src="./Screenshot (1279).png"
                         alt="online_pharmacy"
                         className="w-full h-48 object-cover shadow-md rounded-xl"
                     />
