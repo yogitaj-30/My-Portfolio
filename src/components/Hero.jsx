@@ -20,9 +20,16 @@ const Hero = () => {
                 <a
                     href="/Yogita_Joshi_Resume.pdf"
                     download
-                    className="bg-white text-indigo-600 px-5 md:px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
+                    className="bg-white text-indigo-600 px-4 md:px-6 py-3 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
                 >
                     📄 Download Resume
+                </a>
+                <a
+                    href="https://drive.google.com/file/d/10ZldPRDuovu3eM2rW4YdMt5jL4CZcpAi/view?usp=sharing"
+                    target='_blank'
+                    className="bg-white text-indigo-600 px-4 md:px-6 py-3 ml-2 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:bg-gray-200 transition duration-300"
+                >
+                    👀View Resume
                 </a>
             </div>
         </section>
