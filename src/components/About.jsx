@@ -16,7 +16,7 @@ const About = () => {
                         <img
                             src="/profile.jpeg"
                             alt="Yogita Joshi"
-                            className="w-32 h-32 md:w-48 md:h-48 object-cover rounded-full shadow-lg border-4 border-white"
+                            className="w-44 h-44 md:w-54 md:h-54 object-cover rounded-full shadow-lg border-4 border-white"
                         />
                     </div>
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-4">
