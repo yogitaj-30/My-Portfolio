@@ -6,33 +6,16 @@ const Skills = () => {
                 Technical Skills
             </h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
-                <div className="p-6 shadow-lg rounded-xl hover:scale-105 transition-transform duration-300  relative z-0 overflow-hidden">
-                    <h2 className="text-2xl font-semibold mb-4">Languages</h2>
-                    <img
-                        src="./javascript-logo-javascript-icon-transparent-free-png.webp"
-                        className="mx-auto h-20 w-20 mb-4"
-                        alt="javascript_logo"
-                    />
-                    <p className="text-gray-600">
-                        My favorite language for solving problems and building applications.
-                    </p>
-                </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
                 <div className="p-6 shadow-lg rounded-xl hover:scale-105 transition-transform duration-300  relative z-0 overflow-hidden">
                     <h2 className="text-2xl font-semibold mb-4">Front-End</h2>
                     <div className="grid grid-cols-2 gap-4 place-items-center mb-4">
                         <img src="./react_original_wordmark_logo_icon_146375.png" className="h-16" alt="react_logo" />
                         <img src="./HTML5_logo_and_wordmark.svg.png" className="h-16" alt="html_logo" />
                         <img src="./CSS3_logo_and_wordmark.svg" className="h-16" alt="css_logo" />
-                        <img
-                            src="./tailwind-css-logo-png_seeklogo-434090.png"
-                            className="h-28"
-                            alt="tailwind_logo"
-                        />
-                        <div className="col-span-2 flex justify-center">
-                            <img src="./Redux.png" className="h-16" alt="redux_logo" />
-                        </div>
+                        <img src="./javascript-logo-javascript-icon-transparent-free-png.webp" className="h-18" alt="javascript_logo" />
+                        <img src="./tailwind-css-logo-png_seeklogo-434090.png" className="h-28" alt="tailwind_logo" />
+                        <img src="./Redux.png" className="h-16" alt="redux_logo" />
                     </div>
                     <p className="text-gray-600">
                         My preferred technologies for building responsive and modern UIs.

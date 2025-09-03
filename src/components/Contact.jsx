@@ -1,97 +1,9 @@
-// import React from "react";
-// import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-
-// const Contact = () => {
-//     return (
-//         <section
-//             id="contact"
-//             className="py-16 bg-indigo-400 text-center flex flex-row justify-around"
-//         >
-//             <div>
-//                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-//                     Connect With Me
-//                 </h1>
-
-//                 <div className="text-lg text-white mb-6">
-//                     <p>📞 Contact Number: <span className="font-semibold">9368871655</span></p>
-//                     <p>
-//                         📩 Email:{" "}
-//                         <a
-//                             href="mailto:joshiyogita67@gmail.com"
-//                             className="text-gray-200 hover:underline hover:text-yellow-300"
-//                             target="_blank"
-//                         >
-//                             joshiyogita67@gmail.com
-//                         </a>
-//                     </p>
-//                 </div>
-
-//                 <div className="flex justify-center gap-8 mt-8">
-//                     <a
-//                         href="https://www.linkedin.com/in/yogita-joshi30/"
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="text-white text-4xl hover:scale-110 transition-transform hover:text-amber-200"
-//                     >
-//                         <FaLinkedin />
-//                     </a>
-//                     <a
-//                         href="https://github.com/yogitaj-30"
-//                         target="_blank"
-//                         rel="noopener noreferrer"
-//                         className="text-white text-4xl hover:scale-110 transition-transform hover:text-amber-200"
-//                     >
-//                         <FaGithub />
-//                     </a>
-//                     <a
-//                         href="mailto:joshiyogita67@gmail.com"
-//                         target="_blank"
-//                         className="text-white text-4xl hover:scale-110 transition-transform hover:text-amber-200"
-//                     >
-//                         <FaEnvelope />
-//                     </a>
-//                 </div>
-//             </div>
-
-//             <div className="flex flex-col items-start justify-center">
-//                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-//                     Get In Touch
-//                 </h1>
-
-//                 <form className="flex flex-col text-lg text-white mb-6">
-//                     <div className="">
-//                         <input type="text" placeholder="First Name" className="bg-white rounded-xl p-2 m-2 text-black text-sm max-w-100 w-70" />
-//                         <input type="text" placeholder="Last Name" className="bg-white rounded-xl p-2 m-2 text-black text-sm max-w-100 w-70" />
-//                     </div>
-//                     <div className="flex flex-row justify-center">
-//                         <input type="email" placeholder="Email address" className="bg-white rounded-xl p-2 m-2 text-black text-sm max-w-100 w-70" />
-//                         <input type="number" placeholder="Phone No." className="bg-white rounded-xl p-2 m-2 text-black text-sm max-w-100 w-70" />
-//                     </div>
-//                     <div>
-//                         <textarea rows={4} placeholder="Message" className="bg-white rounded-xl p-2 m-2 text-black text-sm max-w-100 w-100" />
-//                     </div>
-//                     <button
-//                         className="text-indigo-500 bg-gray-50 rounded-xl px-5 py-2 text-xl hover:scale-110 transition-transform
-//                         hover:bg-indigo-300 hover:text-amber-200"
-//                         onClick>
-//                         Send
-//                     </button>
-//                 </form>
-//             </div>
-
-//         </section>
-//     );
-// };
-
-// export default Contact;
-
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-    const [confirmation, setConfirmation] = useState("");
-
+    const [status, setStatus] = useState("");
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -99,20 +11,23 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                "service_8oi3fdi",   // from EmailJS
-                "template_prg53b5",  // from EmailJS
+                "service_w4zanwc",
+                "template_kpeqjus",
                 form.current,
-                "r1azPmLPmfASnZ-bH"    // from EmailJS
+                "25DpuRBvvHlwTQAgu"
             )
-            .then((result) => {
-                setConfirmation("Message sent successfully!")
-                // alert("✅ Message sent successfully!");
-                e.target.reset();
-            })
-            .catch((error) => {
-                alert("❌ Failed to send, please try again.");
-                console.log(error.text);
-            })
+            .then(
+                () => {
+                    setStatus("Message sent successfully!");
+                    e.target.reset();
+                    setTimeout(() => setStatus(""), 4000)
+                },
+                (error) => {
+                    setStatus("Failed to send, please try again.");
+                    setTimeout(() => setStatus(""), 4000)
+                    console.error(error.text);
+                }
+            )
     };
 
     return (
@@ -177,7 +92,9 @@ const Contact = () => {
                 <h1 className="text-3xl md:text-4xl font-bold mb-6 text-white">
                     Get In Touch
                 </h1>
-
+                {status && (
+                    <span className="mt-2 mb-4 text-white font-medium">{status}</span>
+                )}
                 <form
                     ref={form}
                     onSubmit={sendEmail}

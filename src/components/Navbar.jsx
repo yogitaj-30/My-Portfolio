@@ -56,8 +56,8 @@ const Navbar = () => {
             </div>
 
             {isOpen && (
-                <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm">
-                    <ul className="md:hidden flex flex-col items-center rounded-md py-6 gap-6 text-lg font-medium fixed w-full shadow-lg">
+                <div className="md:hidden fixed top-16 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm" onClick={() => setIsOpen(!isOpen)}>
+                    <ul className="md:hidden flex flex-col items-center rounded-md py-6 gap-6 text-lg font-medium fixed w-full shadow-sm">
                         <li><a href="#about" className="font-bold text-xl text-white" onClick={() => setIsOpen(false)}>About Me</a></li>
                         <li><a href="#skills" className="font-bold text-xl text-white" onClick={() => setIsOpen(false)}>Skills</a></li>
                         <li><a href="#projects" className="font-bold text-xl text-white" onClick={() => setIsOpen(false)}>Projects</a></li>

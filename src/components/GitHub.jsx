@@ -9,23 +9,27 @@ const GitHub = () => {
                 My GitHub Statistics
             </h1>
 
-            <div className="flex flex-col md:flex-row justify-center gap-10 mb-10">
-                <img
-                    src="https://github-readme-stats.vercel.app/api?username=yogitaj-30&show_icons=true&theme=dracula"
-                    alt="GitHub Stats"
-                    className="rounded-lg shadow-lg"
-                />
-                <img
-                    src="https://github-readme-stats.vercel.app/api/top-langs/?username=yogitaj-30&layout=compact&theme=dracula"
-                    alt="Most Used Languages"
-                    className="rounded-lg shadow-lg"
-                />
+            <div className="flex flex-col md:flex-row justify-center items-center gap-10 mb-10">
+                <div className="w-full md:w-1/2 flex justify-center">
+                    <img
+                        src="https://github-readme-stats.vercel.app/api?username=yogitaj-30&show_icons=true&theme=dracula"
+                        alt="GitHub Stats"
+                        className="rounded-lg shadow-lg max-w-full h-auto"
+                    />
+                </div>
+                <div className="w-full md:w-1/2 flex justify-center">
+                    <img
+                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=yogitaj-30&layout=compact&theme=dracula"
+                        alt="Most Used Languages"
+                        className="rounded-lg shadow-lg max-w-full h-auto"
+                    />
+                </div>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-indigo-700 mb-10">
                 My GitHub Calendar
             </h2>
-            <div className="border rounded-lg shadow-lg bg-white p-6">
+            <div className="border rounded-lg shadow-lg bg-white p-6 overflow-x-auto">
                 <GitHubCalendar
                     username="yogitaj-30"
                     blockSize={14}
